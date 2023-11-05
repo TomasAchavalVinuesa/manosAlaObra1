@@ -1,0 +1,74 @@
+.ToDoList{
+  width: 80%;
+  background-color: rgba(199, 195, 190, 0.897);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+h1{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+.InputContainer {
+    display: flex;
+}
+
+.TareaInput{
+    width: 100%;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+.ContainerTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 7px 0px;
+    position: relative; 
+    margin-right: 10px;
+  }
+  .BotonBorrar {
+    position: absolute;
+    right: 5px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0px 7px;
+  }
+.TachoImg{
+    width: 13px;
+}
+@keyframes tachadoa {
+    0% {color: rgb(0, 0, 0);}
+    10% {color: rgb(63, 0, 0);}
+    25% {color: rgb(127, 0, 0);}
+    50% {color: rgb(255, 0, 0);}
+    75% {color: rgb(127, 0, 0);}
+    90% {color: rgb(63, 0, 0);}
+    100% {color: rgb(0, 0, 0);}
+}
+input[type=checkbox]:checked + label.TareaTachada{
+    text-decoration: line-through;
+    animation-name: tachadoa;
+    animation-duration: 1s;
+}
